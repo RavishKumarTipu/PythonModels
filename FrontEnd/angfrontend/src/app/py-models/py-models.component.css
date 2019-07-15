@@ -1,0 +1,186 @@
+ 
+
+.pycontainer{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    background-color: rgb(121, 153, 212);
+    height: 78%;
+    width: 97%;
+    margin: 10px;
+    padding: 10px;
+     /*border-collapse: separate;*/
+     border-radius: 5px;
+}
+
+.pycontainer .modelcontainer {
+    border: 1px solid black;
+    width: 18%;
+    height: 99%;
+    border-radius: 3px;
+    background-color: rgb(148, 73, 73);
+    margin: 2px;
+    padding: 2px;
+}
+
+.pycontainer .modelcontainer .modellistcontainer {
+    border: 1px solid black;
+    width: 98%;
+    height: 90%;
+    border-radius: 3px;
+    background-color: rgb(148, 73, 73);
+    margin: 2px;
+    padding: 2px;
+    overflow: scroll;
+}
+.pycontainer .modelcontainer .modellistcontainer .modelelement
+{
+    background-color: black;
+    border: 1px solid grey;
+    color: white;
+    margin-top: 1px;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+.pycontainer .modelcontainer .modellistcontainer .modelelement:hover
+{
+    border: 3px solid lightblue;
+    cursor: pointer; 
+}
+
+.pycontainer .modelcontainer .modellistcontainer .modelelement:active
+{
+    background-color: grey;
+    color: black;
+    cursor: pointer; 
+    border: 3px lightslategrey solid;
+    transform: skewY(-1deg);
+    transform: skewX(-1deg);
+}
+
+
+.pycontainer .resultcontainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 80%;
+    height: 99%;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 2px;       
+     
+}
+ 
+
+.pycontainer .resultcontainer .controlcontainer {
+    width: 99%;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pycontainer .resultcontainer .resultbottomcontainer {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 99%;
+    height: 99%;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 2px;  
+}
+
+.pycontainer .resultcontainer .resultbottomcontainer .pymodelcontainer {
+    margin: 2px;
+    padding: 2px;
+    width: 50%;
+    height: 99%;
+    border-radius: 5px;
+      
+}
+.pycontainer .resultcontainer .resultbottomcontainer .pymodelresultcontainer {
+    margin: 2px;
+    padding: 2px;
+    width: 24%;
+    height: 99%;
+    border-radius: 5px;
+    
+}
+
+.pycontainer .resultcontainer .resultbottomcontainer .pyimagecontainer {
+    margin: 2px;
+    padding: 2px;
+    width: 30%;
+    height: 99%;
+    border: 1px solid blue;
+    border-radius: 5px;
+   /* background-image: url('../../assets/bg.png');*/
+   background-color: darkblue;
+    overflow: scroll;
+
+}
+.pycontainer .resultcontainer .resultbottomcontainer .pyimagecontainer .pyimage {
+    opacity: 1.0;
+    margin: 5px;
+    padding: 5px;
+ }
+
+
+
+
+
+tr, td {
+     border-radius: 2px;
+}
+
+textarea {
+    height: 99%;
+    width: 99%;
+     overflow: scroll; 
+    overflow-y: scroll; 
+    overflow-x: scroll; 
+    overflow:-moz-scrollbars-vertical;
+    
+}
+
+textarea.modelcode {
+
+    border-radius: 5px;
+    background-color: rgb(250, 248, 248);
+    color: rgb(10, 4, 4);
+}
+
+textarea.modelresult {
+     border-radius: 5px;
+    background-color: black; 
+    color: rgb(44, 245, 18);
+    font-family: 'Digital-7', arial;
+    font-size: 15px;
+} 
+
+
+mat-icon  
+{
+    color: warm;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

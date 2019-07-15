@@ -1,0 +1,23 @@
+<mat-toolbar  
+  style="min-height:40px !important;
+        height:40px !important; 
+        margin-top:25px !important;
+        background-color: rgb(2, 2, 32);">
+
+
+        <table>
+          <tr>
+            <td>
+              <img src="assets/wait.gif" style="height:30px;width:30px;" *ngIf="((_loginService != null) && (_loginService._footer_data.callstatus === 1))" >
+              <img src="assets/ok.png" style="height:30px;width:30px;" *ngIf="((_loginService != null) && (_loginService._footer_data.callstatus === 0))" >
+              <img src="assets/error.png" style="height:30px;width:30px;" *ngIf="((_loginService != null) && (_loginService._footer_data.callstatus === 2))" >
+            </td>
+            <td [ngClass]="((_loginService != null) && (_loginService._footer_data.message.success)) ? 'success' : 'error' ">
+                {{_loginService._footer_data.message.msg}}
+            </td>
+          </tr>
+        </table>
+
+
+</mat-toolbar>
+

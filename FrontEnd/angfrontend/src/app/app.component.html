@@ -1,0 +1,33 @@
+  
+   <mat-toolbar color="primary">
+              <span class="gap">
+               <button class="buttongap" mat-raised-button color="warn">MANCER</button>
+               <button class="buttongap" mat-raised-button color="warn" *ngIf="_loginService._loggedUser==null"> Log In </button>          
+               <button class="buttongap" mat-mini-fab color="warn"  matBadge="{{_loginService._loggedUser.role.slice(0,1) | uppercase}}" matBadgePosition="after" matBadgeColor="transparent" *ngIf="_loginService._loggedUser != null"> {{_loginService._loggedUser.username.slice(0,2) | titlecase}} </button>          
+              </span>
+              <mat-divider [vertical]= "true" class="buttongap"></mat-divider>
+              <!-- start dynamic menu .. lay down top level menu items-->
+               <span class="filler" *ngIf= "((_loginService._loggedUser != null) && (_loginService._loggedUser.actions != null))">
+                <span *ngFor="let item of _loginService._loggedUser.actions">
+                    <!-- handle branch node buttons here -->
+                    <span *ngIf="item.childactions && item.childactions.length >0">
+                      <button mat-button [matMenuTriggerFor]="menu.childMenu">
+                          {{item.description}}
+                      </button>
+                      <app-menu-item #menu [items]="item.childactions"></app-menu-item>
+                    </span>
+                    <!-- leaf node buttons here-->
+                    <span *ngIf="!item.childactions || item.childactions.length === 0">
+                      <button mat-button color="primary">
+                        {{item.description}}
+                      </button> 
+                    </span>
+                </span>  
+              </span> 
+  </mat-toolbar>
+    
+<router-outlet></router-outlet>
+
+ <app-footer class="godown"></app-footer> 
+ 
+ 

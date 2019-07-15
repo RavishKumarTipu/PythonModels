@@ -1,0 +1,66 @@
+ 
+<div class="pycontainer">
+  <div class="modelcontainer">
+      <table>
+        <tr>
+          <td><b>Models</b></td>
+          <td>
+              <button mat-raised-button (click)="addPy();">
+                <mat-icon>add</mat-icon> 
+              </button>
+          </td>
+        </tr>
+      </table>
+
+        <div class="modellistcontainer">
+         
+             <div class="modelelement"  *ngFor="let m of _models" (click)="editPy(m);">{{m.name}}</div> 
+          
+      </div>
+     
+  </div>
+
+
+
+  <div class = "resultcontainer" *ngIf="_editmodel != null">
+      <div class="controlcontainer">
+              <div><mat-label> Name: </mat-label><input mat-input [(ngModel)]="_editmodel.name" disabled> </div>
+              <div><mat-label> Path: </mat-label><input mat-input [(ngModel)]="_editmodel.path" disabled> </div>
+              
+              <div style="margin-left: auto;">
+                 <button *ngIf="((_editmodel != null) && (_editmodel.arguments != null) && (_editmodel.arguments.length > 0))" 
+                  mat-raised-button color="warn" style="margin:1px;"  
+                  (click)="showModelImages(_editmodel.arguments);"> 
+                  <mat-icon>cached</mat-icon>
+                </button>
+                <button mat-raised-button color="warn" style="margin:1px;" (click)="runPy(_editmodel);"> 
+                  <mat-icon>touch_app</mat-icon>
+                </button>
+                <button mat-raised-button color="warn" style="margin:1px;" (click)="savePy(_editmodel);"> 
+                  <mat-icon>save</mat-icon>
+                </button>
+                <button mat-raised-button color="warn" style="margin:1px;"> 
+                  <mat-icon>delete</mat-icon>
+                </button>  
+              </div>
+          </div>
+     <div class="resultbottomcontainer">  
+      <div class="pymodelcontainer">
+        <textarea matInput class="modelcode" spellcheck="false" style="font-size: large;" [(ngModel)]="_editmodel.code"> 
+            
+        </textarea>
+      </div>
+      <div class="pymodelresultcontainer">
+        <textarea matInput spellcheck="false" class="modelresult"[ngStyle]="_result.success ? {'color':'rgb(44, 245, 18)'} : {'color':'red'}" disabled>
+          {{_result.msg}}
+        </textarea>
+      </div>
+      <div class="pyimagecontainer">
+         <div class="pyimage" *ngFor="let i  of _images">
+               <img [src]="i" style="height:300px;width:300px;">
+           </div>
+      </div>
+    </div>
+  </div>
+    
+</div>

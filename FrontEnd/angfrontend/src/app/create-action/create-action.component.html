@@ -1,0 +1,66 @@
+
+
+
+
+<app-actions></app-actions>
+
+
+
+
+<!--
+ <div>
+    <button mat-raised-button color="secondary">Save</button>
+    <button mat-raised-button color="secondary">Refresh</button>
+    <button mat-raised-button color="secondary">Edit</button>
+    <button mat-raised-button color="secondary">Cancel</button>
+</div>
+
+
+
+
+
+<table mat-table [dataSource]="actionJson" class="mat-elevation-z8">
+
+           The actual rendered columns are set as a property on the row definition" 
+  
+    <ng-container matColumnDef="edit">
+       <th mat-header-cell [ngClass]="header-table"  *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let element">
+        <button  mat-raised-button color="warn">Edit</button> </td>
+    </ng-container>
+               
+     <ng-container matColumnDef="role">
+      <th mat-header-cell   *matHeaderCellDef> Role </th>
+      <td mat-cell  *matCellDef="let element"> {{element.role}} </td>
+    </ng-container>
+  
+     <ng-container matColumnDef="action">
+      <th mat-header-cell   *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+    </ng-container>
+  
+     <ng-container matColumnDef="description">
+      <th mat-header-cell   *matHeaderCellDef> Desc </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+     <ng-container matColumnDef="parent">
+      <th mat-header-cell   *matHeaderCellDef> parent </th>
+      <td mat-cell *matCellDef="let element"> {{element.parent}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="link">
+        <th mat-header-cell *matHeaderCellDef> Link </th>
+        <td mat-cell *matCellDef="let element"> {{element.link}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="menuitem">
+          <th mat-header-cell *matHeaderCellDef> Menu Item </th>
+          <td mat-cell *matCellDef="let element"> {{element.menuitem}} </td>
+    </ng-container>
+      
+      
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns:displayedColumns;"></tr>
+  </table>
+-->

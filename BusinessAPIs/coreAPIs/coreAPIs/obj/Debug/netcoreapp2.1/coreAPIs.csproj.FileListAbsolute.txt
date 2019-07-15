@@ -1,0 +1,14 @@
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\bin\Debug\netcoreapp2.1\coreAPIs.deps.json
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\bin\Debug\netcoreapp2.1\coreAPIs.runtimeconfig.json
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\bin\Debug\netcoreapp2.1\coreAPIs.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\bin\Debug\netcoreapp2.1\coreAPIs.dll
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\bin\Debug\netcoreapp2.1\coreAPIs.pdb
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.csprojAssemblyReference.cache
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.RazorAssemblyInfo.cache
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.RazorAssemblyInfo.cs
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.RazorTargetAssemblyInfo.cache
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.dll
+C:\Users\lenovo\Desktop\Project\BusinessAPIs\coreAPIs\coreAPIs\obj\Debug\netcoreapp2.1\coreAPIs.pdb

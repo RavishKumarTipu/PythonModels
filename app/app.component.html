@@ -1,0 +1,10 @@
+<button mat-button [matMenuTriggerFor] = "menu">File</button>
+<mat-menu #menu = "matMenu">
+   <button mat-menu-item>New</button>
+   <button mat-menu-item>Open</button>
+   <button mat-menu-item [matMenuTriggerFor] = "recent">Recent</button>
+</mat-menu>
+<mat-menu #recent = "matMenu">
+   <button mat-menu-item>File 1</button>
+   <button mat-menu-item>File 2</button>
+</mat-menu>

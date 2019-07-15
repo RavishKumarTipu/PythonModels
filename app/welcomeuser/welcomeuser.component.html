@@ -1,0 +1,6 @@
+<p *ngIf="((this._loginService != null) && (this._loginService._loggedUser != null))">
+ Hi {{this._loginService._loggedUser.username | titlecase}} , <button (click)="LandingPage();">Click to continue</button>
+</p>
+<p>
+    Not you ?  <br/> <button (click) = "logout();" >Click here to login...</button>
+</p>

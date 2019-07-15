@@ -1,0 +1,85 @@
+
+<div class="container">
+    <button mat-icon-button class="buttongap" (click)="addAction();" color="warn">
+        <mat-icon>add</mat-icon></button>
+    <button mat-icon-button class="buttongap" (click)="saveActions();" color="warn">
+        <mat-icon>save</mat-icon>
+    </button>
+</div>
+<div class="table-wrapper">
+     <table>
+         <tr> 
+        <th  >
+                <mat-label class="inputgap"> <b>Action</b></mat-label>
+        </th>
+        <th  >
+                <mat-label class="inputgap">  <b>Role</b></mat-label>
+        </th>
+        <th  >
+                <mat-label class="inputgap"> <b>Description</b></mat-label>
+        </th>
+        <th  >
+                <mat-label class="inputgap"><b> Link</b></mat-label>
+        </th>
+        <th  >
+                <mat-label class="inputgap"><b> Parent</b></mat-label>
+        </th  >
+        <th  >
+                <mat-label class="inputgap"><b> Manu Item</b></mat-label>
+        </th>
+        <th>
+            <button   class="buttongap">
+                <mat-icon  color="warn">save all</mat-icon></button>
+       </th>
+       <th>
+            <button     class="buttongap">
+              <mat-icon  color="warn">delete all</mat-icon>   </button>
+       </th>
+      
+    </tr> 
+      <tr  *ngFor="let _action of  _loginService._actions">
+        <td  >
+            <span class="inputgap" style="color:black;">{{_action.action}}</span>
+        </td>
+        <td  > 
+            <select [(ngModel)]="_action.role" name="role">
+                   <option *ngFor="let r of _roles"  [ngValue]= "r.role">
+                       {{r.role}}
+                   </option> 
+            </select>
+            <!--<input mat-input [ngModel]="_action.role" class="inputgap">-->
+        </td>
+        <td  >
+            <input mat-input [(ngModel)]="_action.description" class="inputgap">
+        </td>
+        <td   >
+            <input mat-input [(ngModel)]="_action.link" class="inputgap">
+        </td>
+        <td  >
+                <select [(ngModel)]="_action.parent" name="parent">
+                        <option *ngFor="let p of _parents"  [ngValue]= "p">
+                            {{p}}
+                        </option> 
+                 </select>
+            <!--<input mat-input [ngModel]="_action.parent" class="inputgap">-->
+        </td>
+        <td  >
+            <input mat-input [(ngModel)]="_action.menuitem"  class="inputgap">
+        </td>
+        <td  >
+            <button   class="buttongap" (click)="saveAction(_action);">
+                <mat-icon  color="warn"> save </mat-icon>     
+            </button>
+       </td>
+       <td  >
+            <button   class="buttongap">
+                  <mat-icon color="warn">delete</mat-icon>
+            </button>
+    </td>
+  
+    </tr>
+</table>
+</div> 
+<br/>
+<br/>
+<span [ngStyle]="this._loginService._action_message.success ? {'color':'blue', 'background-color': 'grey'} : {'color':'red', 'background-color': 'grey'}">{{_loginService._action_message.msg}}</span>      

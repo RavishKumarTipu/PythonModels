@@ -1,0 +1,27 @@
+ <div class="container">
+   <table class="table table-dark table-hover table-striped">
+      <tr>
+           <td colspan="2">Login Page:</td>
+       </tr>
+     <tr>
+        <td>User Name: </td>
+        <td><input [(ngModel)]="username" required/> </td>
+     </tr>
+     <tr>
+        <td>Password: </td>
+        <td><input type="password" [(ngModel)]="password" required/> </td>
+     </tr>
+     <tr>
+        <td colspan="2"><button  (click)="validateuser();">Login </button></td>
+    </tr>
+    <tr>
+      <td colspan="2"> <input type="checkbox" [(ngModel)]="rememberme"> Remember Me </td>
+  </tr>
+    <tr>
+       <td> 
+      </td>
+    </tr>
+  
+   </table>
+   <span [ngStyle]="blnSuccess==true ? {'color':'green'} : {'color': 'red'}"><i>{{errmsg}}</i></span>
+</div>

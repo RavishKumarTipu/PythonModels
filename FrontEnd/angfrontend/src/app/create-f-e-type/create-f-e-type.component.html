@@ -1,0 +1,67 @@
+   <div class="container">
+   <div class="itemtypebox">
+    <div class="itemtypeheader">
+           <input mat-input  style="width:60%;margin:2px;padding:2px;" placeholder="search actions.." [ngModel]="searchItem" (ngModelChange) = "searchItemTypes($event);">
+         <div class="itemactionbox"> 
+          <button>
+            <mat-icon class="availableIcons" (click)="addET();">add</mat-icon>
+          </button>
+          <button>
+            <mat-icon class="availableIcons">delete</mat-icon>
+          </button>
+        </div>
+    </div>
+    <div class="availablebox" *ngFor="let a of _feFilter">
+      <div>
+           {{ a.name }} 
+      </div>
+      <span class="availableactionbox">
+             <button>
+                 <mat-icon class="availableIcons" (click)="editET(a);">edit</mat-icon>
+           </button>
+           <button>
+               <mat-icon class="availableIcons" (click) ="deleteET(a);">delete </mat-icon>
+            </button>
+      </span>
+   </div>
+</div>
+ <div class="itemeditpanel" *ngIf="_feEdit != null">
+
+   <div style="display: flex; flex-direction: row;width:100%;">
+         <mat-label> _ID :  {{_feEdit._id}}</mat-label>
+        
+     <div style="margin-left: auto;">
+        <button (click)="saveET();">
+            <mat-icon class="availableIcons" >save</mat-icon>
+      </button>
+      <button>
+          <mat-icon class="availableIcons">cancel</mat-icon>
+       </button>
+    </div>
+    </div>
+    
+    <table>
+      <tr>  
+         <td>Name : </td><td> <input mat-input [(ngModel)]="_feEdit.name"> </td>
+      </tr>
+    <tr>
+        <td>Description : </td><td>  <input mat-input [(ngModel)]="_feEdit.Description"></td>
+    </tr> 
+    <tr>
+        <td>Type :</td> 
+        <td>  
+          <mat-radio-group aria-labelledby="example-radio-group-label" class="myradiogroup" [(ngModel)]="_feEdit.type" >
+            <mat-radio-button class="myradio" *ngFor ="let r of _feFormType" [value]="r.type">{{r.type}}</mat-radio-button>
+
+          </mat-radio-group>
+           
+    </tr>
+    <tr>
+        <td>Background Color : </td><td> <input  [(colorPicker)]="_feEdit.bgcolor" [style.background]="_feEdit.bgcolor"> </td>
+    </tr> 
+    <tr>
+        <td>Color : </td> <td>  <input   [(colorPicker)]="_feEdit.color" [style.background]="_feEdit.color"> </td>
+    </tr>
+    </table>
+</div>
+</div>
